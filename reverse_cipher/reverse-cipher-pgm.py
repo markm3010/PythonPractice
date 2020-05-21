@@ -1,13 +1,31 @@
 # Reverse Cipher
 
-message = 'those days are gone,these new days are here.nobody likes it but at least I have beer'
+def encrypt_msg(message):
+    msg_len = len(message) - 1
+    encrypted_msg = ''
 
-msg_len = len(message) - 1
+    # I'm reading the 'Cracking Codes...' book
+    # by Al Sweigart, I wrote this out for the
+    # practice and experience.
+    while msg_len >=0:
+        encrypted_msg += message[msg_len]
+        msg_len -= 1
 
-encrypted_msg = ''
-while msg_len >=0:
-    encrypted_msg += message[msg_len]
-    msg_len -= 1
+    return encrypted_msg
 
-print(f"UNENCRYPTED MESSAGE:\n>>>{message}<<<\n")
-print(f"ENCRYPTED MESSAGE:\n>>>{encrypted_msg}<<<\n")
+
+def decrypt_it(message):
+    return message[::-1]
+
+
+def main():
+    m = input("Type message to encrypt below.\n\n")
+    encr_msg = encrypt_msg(m)
+    print(f"ENCRYPTED MESSAGE:\n>>>{encr_msg}<<<\n")
+    
+    decr_msg = decrypt_it(encr_msg)
+    print(f"DECRYPTED MESSAGE:\n>>>{decr_msg}<<<\n")
+
+
+if __name__ == '__main__':
+    main()
