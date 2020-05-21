@@ -22,7 +22,6 @@ def main():
     m = input("Type message to encrypt below.\n\n")
     encr_msg = encrypt_msg(m)
     print(f"ENCRYPTED MESSAGE:\n>>>{encr_msg}<<<\n")
-    
     decr_msg = decrypt_it(encr_msg)
     print(f"DECRYPTED MESSAGE:\n>>>{decr_msg}<<<\n")
 
