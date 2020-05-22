@@ -35,7 +35,6 @@ def encryptMessage(key, message):
 # call the main() function:
 if __name__ == '__main__':
     ret = main()
-    print(ret)
 
 
 
