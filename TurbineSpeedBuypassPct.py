@@ -20,5 +20,4 @@ while True:
     else:
         perc = (float(hival) - float(loval)) / float(hival) * 100
         rounded_perc = round(perc, 3)
-        print(f"TRPMPERCTX should be {rounded_perc}\n")
-
+        print(f"Turbine speed % diff is {rounded_perc}\n")
