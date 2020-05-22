@@ -1,7 +1,7 @@
 from signal import signal, SIGINT
 import sys
 
-print('\nPBI\'s ADV:369915 and CAD:330643 \nVerify percent calc is correct: ( (hivalue-lowvalue)/hivalue*100 )')
+print('\nVerify percent calc is correct: ( (hivalue-lowvalue)/hivalue*100 )')
 print()
 
 def handler(signal_received, frame):
